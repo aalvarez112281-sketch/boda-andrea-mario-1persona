@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Andrea & Mario | Nuestra Boda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="eventos.css">
+</head>
+
+<body>
+    <div id="sobreInicial">
+
+    <div class="sobre">
+
+        <div class="tapa"></div>
+
+  <div class="carta">
+    <h2>Andrea <span>&</span> Mario</h2>
+
+    <p>17 de Octubre de 2026</p>
+
+    <p class="pase-carta">
+        Pase para
+        <strong>1</strong>
+        persona
+    </p>
+</div>
+  
+   <!-- =========================
+PANTALLA DE BIENVENIDA
+========================= -->
+
+<section id="hero">
+
+<div class="overlay"></div>
+
+<picture>
+    <source media="(max-width: 768px)" srcset="img/portada-vertical.png">
+    <img src="img/portada-nueva.jpg" alt="Andrea y Mario">
+</picture>
+<div class="contenidoHero">
+
+<h3>Nos Casamos</h3>
+
+<h1>Andrea <span>&</span> Mario</h1>
+
+<p>17 de Octubre de 2026</p>
+
+<button id="abrirInvitacion">
+
+Abrir Invitación
+
+</button>
+<button id="mostrarSpotify">
+     Nuestra canción
+</button>
+<div class="spotify-player" id="spotifyPlayer" style="display: none;">
+    <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/5fF0fb0VFihGDHFshDLi2Z?utm_source=generator"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+BIENVENIDA
+========================= -->
+
+<section class="bienvenida">
+
+    <div class="bienvenida-texto">
+
+        <span class="bienvenida-detalle">Nuestra historia continúa</span>
+
+        <h2>Con mucha alegría...</h2>
+
+        <p>
+            Queremos invitarte a celebrar el inicio de una nueva etapa
+            en nuestras vidas.
+        </p>
+
+        <p>
+            Tu compañía hará de este día un recuerdo inolvidable.
+        </p>
+
+        <h3>Andrea & Mario</h3>
+
+    </div>
+
+    <img
+        class="bienvenida-foto"
+        src="img/beso.jpg"
+        alt="Andrea y Mario"
+    >
+
+</section>
+
+<!-- =========================
+CUENTA REGRESIVA
+========================= -->
+
+<section id="contador">
+
+    <h2>FALTAN</h2>
+
+    <div id="countdown">
+
+        <div class="tiempo">
+            <h3 id="dias">000</h3>
+            <span>DÍAS</span>
+        </div>
+
+        <div class="tiempo">
+            <h3 id="horas">00</h3>
+            <span>HORAS</span>
+        </div>
+
+        <div class="tiempo">
+            <h3 id="minutos">00</h3>
+            <span>MINUTOS</span>
+        </div>
+
+        <div class="tiempo">
+            <h3 id="segundos">00</h3>
+            <span>SEGUNDOS</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     CEREMONIA Y RECEPCIÓN
+========================= -->
+<!-- =========================
+     CEREMONIA Y RECEPCIÓN
+========================= -->
+
+<div class="eventos-premium">
+
+    <!-- CEREMONIA -->
+    <article class="evento-card evento-ceremonia">
+
+        <div class="evento-emblema">
+            <span class="linea-superior"></span>
+
+            <img
+                src="icons/church.svg"
+                alt="Iglesia"
+                class="evento-icono"
+            >
+
+            <span class="linea-superior"></span>
+        </div>
+
+        <h2>Ceremonia</h2>
+        <span class="evento-subtitulo">Religiosa</span>
+
+        <img
+            src="icons/floral/divider.svg"
+            alt=""
+            class="evento-divisor"
+        >
+
+        <h3>Parroquia de Nuestra Señora de Guadalupe</h3>
+
+        <div class="evento-datos">
+            <p>
+                <img src="icons/calendar-days.svg" alt="" class="icono-info">
+                <span>17 Octubre 2026</span>
+            </p>
+
+            <p>
+                <img src="icons/clock.svg" alt="" class="icono-info">
+                <span>5:00 PM</span>
+            </p>
+        </div>
+
+        <a
+            class="evento-boton"
+            href="https://maps.app.goo.gl/xXkyCVUDRaohUDKu9"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="icons/map-pin.svg" alt="" class="icono-boton">
+            <span>Cómo llegar</span>
+        </a>
+
+    </article>
+
+
+    <!-- RECEPCIÓN -->
+    <article class="evento-card evento-recepcion">
+
+        <div class="evento-emblema">
+            <span class="linea-superior"></span>
+
+            <img
+                src="icons/rings.svg"
+                alt="Anillos"
+                class="evento-icono"
+            >
+
+            <span class="linea-superior"></span>
+        </div>
+
+        <h2>Recepción</h2>
+        <span class="evento-subtitulo">Celebración</span>
+
+        <img
+            src="icons/floral/divider.svg"
+            alt=""
+            class="evento-divisor"
+        >
+
+        <h3>Quinta Victoria</h3>
+
+        <div class="evento-datos">
+            <p>
+                <img src="icons/calendar-days.svg" alt="" class="icono-info">
+                <span>17 Octubre 2026</span>
+            </p>
+
+            <p>
+                <img src="icons/clock.svg" alt="" class="icono-info">
+                <span>8:00 PM</span>
+            </p>
+        </div>
+
+        <a
+            class="evento-boton"
+            href="https://maps.app.goo.gl/rm3Qq9v5pseqgwxw6"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <img src="icons/map-pin.svg" alt="" class="icono-boton">
+            <span>Cómo llegar</span>
+        </a>
+
+    </article>
+
+</div>
+       
+<!-- =========================
+ITINERARIO
+========================= -->
+
+<section id="itinerario">
+
+<h2>Itinerario</h2>
+
+<div class="timeline">
+
+<div class="item">
+<h3>5:00 PM</h3>
+<p>Ceremonia Religiosa</p>
+</div>
+
+<div class="item">
+<h3>8:00 PM</h3>
+<p>Recepción</p>
+</div>
+
+<div class="item">
+<h3>8:30 PM</h3>
+<p>Entrada de Andrea & Mario</p>
+</div>
+
+<div class="item">
+<h3>9:00 PM</h3>
+<p>Cena y Brindis</p>
+</div>
+
+<div class="item">
+<h3>10:00 PM</h3>
+<p>Corte del Pastel</p>
+</div>
+
+</div>
+
+</section>
+<!-- =========================
+DRESS CODE
+========================= -->
+
+<section id="dresscode">
+
+    <div class="dress-card">
+
+        <div class="dress-emblema">
+
+            <span class="dress-linea"></span>
+
+            <div class="dress-icono">✦</div>
+
+            <span class="dress-linea"></span>
+
+        </div>
+
+        <h2>Dress Code</h2>
+
+        <span class="dress-subtitulo">
+            Formal Elegante
+        </span>
+
+        <div class="dress-opciones">
+
+            <div class="dress-opcion">
+
+              <h3>Hombres</h3>
+
+                <p>Traje formal</p>
+
+            </div>
+
+            <div class="dress-opcion">
+
+                <h3>Mujeres</h3>
+                <p>Vestido largo o midi</p>
+
+            </div>
+
+        </div>
+
+        <p class="dress-texto">
+
+            Queremos compartir con ustedes una noche elegante y muy especial.
+
+        </p>
+
+        <p class="dress-aviso">
+
+            Agradecemos evitar vestir de blanco, marfil o tonos similares,
+            ya que estos estarán reservados para la novia.
+
+        </p>
+
+    </div>
+
+</section>
+<section id="adultos">
+
+    <div class="adultos-card">
+
+        <div class="adultos-emblema">
+
+            <span class="adultos-linea"></span>
+
+            <div class="adultos-icono"></div>
+
+            <span class="adultos-linea"></span>
+
+        </div>
+
+        <h2>Celebración para Adultos</h2>
+
+        <p class="adultos-texto">
+
+            Con el deseo de que todos puedan disfrutar plenamente
+            de esta noche tan especial,
+
+        </p>
+
+        <p class="adultos-destacado">
+
+            con mucho cariño hemos reservado
+            nuestra celebración para adultos.
+
+        </p>
+
+        <p class="adultos-texto">
+
+            Gracias por comprender esta decisión
+            tomada con mucho cariño.
+
+        </p>
+
+    </div>
+
+</section>
+<!-- ======================
+CONFIRMACIÓN DE ASISTENCIA
+====================== -->
+<section id="rsvp">
+
+    <div class="rsvp-card">
+
+        <div class="rsvp-emblema">
+
+            <span class="rsvp-linea"></span>
+
+            <div class="rsvp-icono"></div>
+
+            <span class="rsvp-linea"></span>
+
+        </div>
+
+        <h2>Confirma tu Asistencia</h2>
+
+        <p class="rsvp-texto">
+
+            Será un honor contar contigo en este día tan especial.
+
+        </p>
+
+         </p>
+
+        <a class="rsvp-boton"
+           href="https://wa.me/526761050046?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Andrea%20y%20Mario.%20😊"
+           target="_blank">
+
+            Confirmar por WhatsApp
+
+        </a>
+
+        <p class="rsvp-numero">
+
+             <strong>676 105 0046</strong>
+
+        </p>
+
+    </div>
+
+</section>
+<section id="regalos">
+
+    <div class="regalos-card">
+
+        <div class="regalos-emblema">
+
+            <span class="regalos-linea"></span>
+
+            <div class="regalos-icono"></div>
+
+            <span class="regalos-linea"></span>
+
+        </div>
+
+        <h2>Mesa de Regalos</h2>
+
+        <p class="regalos-texto">
+
+            Su presencia es nuestro mejor regalo.
+
+        </p>
+
+        <p class="regalos-texto">
+
+            Si desean tener un detalle con nosotros,
+            podrán hacerlo mediante transferencia bancaria
+            o depositándolo en un sobre el día del evento.
+
+        </p>
+
+        <button id="mostrarCuenta">
+
+            Ver datos bancarios
+
+        </button>
+
+        <div id="cuenta">
+
+            <h3>
+
+                Luis Mario Molina Jaik
+
+            </h3>
+
+            <p>
+
+                CLABE
+
+            </p>
+
+            <h4>
+
+                012194015611712016
+
+            </h4>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+REGALOS
+========================= -->
+
+
+
+<!-- =========================
+ÁLBUM
+========================= -->
+
+<section id="album">
+
+    <div class="album-card">
+
+        <div class="album-emblema">
+
+            <span class="album-linea"></span>
+
+            <div class="album-icono">📸</div>
+
+            <span class="album-linea"></span>
+
+        </div>
+
+        <h2>Comparte tus Recuerdos</h2>
+<p class="album-texto">
+    Cada fotografía y video que captures será un hermoso recuerdo que atesoraremos para revivir este día una y otra vez.
+</p>
+        
+
+       <div class="album-qr">
+
+    <img src="img/qr-boda.png"
+         alt="Código QR para compartir fotografías">
+
+</div>
+
+<p class="album-qr-texto">
+    Escanea el código QR y ayúdanos a conservar los recuerdos más especiales de este día.
+</p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+GRACIAS
+========================= -->
+<section id="gracias">
+
+    <div class="gracias-card gracias-romantico">
+
+        <img
+            src="icons/floral/corner-left.svg"
+            alt=""
+            class="gracias-esquina gracias-esquina-izquierda">
+
+        <img
+            src="icons/floral/corner-right.svg"
+            alt=""
+            class="gracias-esquina gracias-esquina-derecha">
+
+        <img
+            src="icons/floral/divider.svg"
+            alt=""
+            class="gracias-divider">
+
+        <h2>Nos vemos muy pronto</h2>
+
+        <p class="gracias-texto">
+            Gracias por acompañarnos
+            en el inicio de esta nueva etapa.
+        </p>
+
+        <h1>
+            Andrea <span>&</span> Mario
+        </h1>
+
+        <p class="gracias-fecha">
+    17 de octubre de 2026
+</p>
+
+        <img
+            src="icons/floral/flower.svg"
+            alt=""
+            class="gracias-flor">
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

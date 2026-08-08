@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "Lemon Milk";
+    src: url("fonts/LEMONMILK-Regular.otf") format("opentype");
+}
+
+:root {
+    --marfil: #fbf7f1;
+    --crema: #f2e7dc;
+    --dorado: #c99a45;
+    --dorado-oscuro: #9a7226;
+    --cafe: #3a2e26;
+    --blanco: #ffffff;
+    --sombra: rgba(58, 46, 38, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Century Gothic", Arial, sans-serif;
+    background: var(--marfil);
+    color: var(--cafe);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+a {
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+
+section {
+    width: 100%;
+}
+/* ==================================================
+   02. PORTADA
+================================================== */
+
+#hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#hero > img {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    filter: sepia(12%) saturate(92%) brightness(88%);
+}
+
+#hero .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(35, 23, 16, 0.25) 0%,
+            rgba(35, 23, 16, 0.38) 55%,
+            rgba(35, 23, 16, 0.58) 100%
+        );
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    pointer-events: none;
+}
+
+.contenidoHero {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenidoHero h3 {
+    font-family: "Lemon Milk", sans-serif;
+    font-size: clamp(0.78rem, 2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+}
+
+.contenidoHero h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    font-weight: 500;
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    margin-bottom: 26px;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.34);
+}
+
+.contenidoHero h1 span {
+    display: inline-block;
+    font-family: "Great Vibes", cursive;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #f0c979;
+    margin: 0 0.08em;
+    transform: translateY(0.05em);
+}
+
+.contenidoHero > p {
+    position: relative;
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: clamp(0.78rem, 1.8vw, 1rem);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+    padding: 0 58px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contenidoHero > p::before,
+.contenidoHero > p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 38px;
+    height: 1px;
+    background: rgba(240, 201, 121, 0.9);
+}
+
+.contenidoHero > p::before {
+    left: 0;
+}
+
+.contenidoHero > p::after {
+    right: 0;
+}
+
+#abrirInvitacion,
+#mostrarSpotify {
+    width: min(100%, 270px);
+    min-height: 52px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#abrirInvitacion {
+    border: 1px solid #e9c16e;
+    background: linear-gradient(135deg, #d6a74d, #b9822d);
+    color: var(--blanco);
+    box-shadow: 0 12px 30px rgba(28, 18, 12, 0.3);
+    margin-bottom: 14px;
+}
+
+#mostrarSpotify {
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#abrirInvitacion:hover,
+#mostrarSpotify:hover {
+    transform: translateY(-2px);
+}
+
+#abrirInvitacion:hover {
+    box-shadow: 0 16px 36px rgba(28, 18, 12, 0.4);
+}
+
+#mostrarSpotify:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: var(--blanco);
+}
+
+#abrirInvitacion:active,
+#mostrarSpotify:active {
+    transform: translateY(0);
+}
+
+.spotify-player {
+    width: min(100%, 420px);
+    margin-top: 18px;
+}
+
+.spotify-player iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* Portada en celular */
+
+@media (max-width: 600px) {
+    #hero {
+        padding: 40px 26px;
+    }
+
+    #hero > img {
+        object-position: center center;
+    }
+
+    #hero::after {
+        inset: 11px;
+    }
+
+    .contenidoHero h3 {
+        letter-spacing: 0.28em;
+        margin-bottom: 20px;
+    }
+
+    .contenidoHero h1 {
+        font-size: clamp(3.45rem, 17vw, 5.2rem);
+        line-height: 0.92;
+        margin-bottom: 24px;
+    }
+
+    .contenidoHero h1 span {
+        display: block;
+        margin: 0.05em 0 -0.02em;
+    }
+
+    .contenidoHero > p {
+        line-height: 1.7;
+        padding: 0 42px;
+        margin-bottom: 28px;
+    }
+
+    .contenidoHero > p::before,
+    .contenidoHero > p::after {
+        width: 27px;
+    }
+
+    #abrirInvitacion,
+    #mostrarSpotify {
+        width: min(100%, 245px);
+        min-height: 50px;
+    }
+}
+#sobreInicial{
+    opacity: 1;
+    transition: opacity .8s ease;
+}
+
+#sobreInicial.ocultar{
+    opacity: 0;
+    pointer-events: none;
+}
