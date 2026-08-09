@@ -364,14 +364,15 @@ section p {
     justify-content: center;
     overflow: hidden;
     background:
-       linear-gradient(rgba(38, 28, 20, 0.28), rgba(38, 28, 20, 0.38)),
-    url("img/manos-nueva.png") center / cover no-repeat;
-    }
+        linear-gradient(rgba(15, 10, 8, 0.18), rgba(15, 10, 8, 0.35)),
+        url("img/manos-nueva.png") center center / cover no-repeat;
+}
+    
 #contador::before {
     content: "";
     position: absolute;
     inset: 0;
-    backdrop-filter: sepia(14%) saturate(82%) brightness(92%);
+    
 }
 
 #contador h2 {
@@ -589,10 +590,31 @@ section:not(#hero):first-of-type {
 
     }
 
-    .contenidoHero {
-        padding-top: 150px;
+   @media (max-width: 720px) {
+    #hero {
+        min-height: 100svh;
+        position: relative;
     }
 
+    .contenidoHero {
+        min-height: 100svh;
+        padding: 55px 22px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abrirInvitacion {
+        margin-top: auto;
+        transform: none !important;
+    }
+
+    #mostrarSpotify {
+        margin-top: 14px;
+        margin-bottom: 10px;
+        transform: none !important;
+    }
+}
     section:not(#hero) {
         padding: 72px 18px;
     }
@@ -791,16 +813,14 @@ section:not(#hero):first-of-type {
     color: var(--dorado-oscuro);
 }
 
-.bienvenida-foto {
+.bienvenida-foto 
+   #hero > img {
     width: 100%;
-    height: clamp(420px, 72vw, 760px);
+    height: 100%;
+    max-width: none;
     object-fit: cover;
-    object-position: center;
-    filter:
-        sepia(18%)
-        saturate(82%)
-        contrast(105%)
-        brightness(92%);
+   object-position: 86% 10%;
+    filter: brightness(82%) contrast(108%) saturate(92%);
 }
 
 @media (max-width: 720px) {
@@ -810,7 +830,7 @@ section:not(#hero):first-of-type {
 
     .bienvenida-foto {
         height: 520px;
-        object-position: center 45%;
+        object-position: center 25%;
     }
 }
 /* =========================================
@@ -3190,7 +3210,7 @@ overflow: hidden;
 }
 
 .sobre.abierto .carta{
-    transform: translateY(-125px);
+    transform: translateY(-px);
     z-index: 5;
 }
 
@@ -3198,4 +3218,157 @@ overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(.6);
     pointer-events: none;
+}
+/* CORRECCIÓN FINAL DE LA TARJETA DEL SOBRE */
+.carta {
+    height: 220px;
+    padding: 22px 18px 18px;
+}
+
+.carta h2 {
+    margin-bottom: 6px;
+    font-size: 2.15rem;
+    line-height: 1.05;
+}
+
+.carta p {
+    font-size: 0.72rem;
+    line-height: 1.5;
+}
+
+.carta .pase-carta {
+    margin-top: 6px;
+}#contador {
+    position: relative;
+    background:
+        linear-gradient(rgba(15, 10, 8, 0.42), rgba(15, 10, 8, 0.58)),
+        url("img/manos-nueva.png") center / cover no-repeat;
+}
+@media (max-width: 720px) {
+
+    #hero {
+        min-height: 100svh;
+        height: auto;
+        padding: 48px 22px 32px;
+    }
+
+    .contenidoHero {
+        min-height: calc(100svh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-botones,
+    .botones-hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 34px;
+    }
+
+    #abrirInvitacion,
+    #mostrarSpotify {
+        width: 100%;
+        max-width: 340px;
+        min-height: 68px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 720px) {
+    #abrirInvitacion {
+        margin-top: 110px;
+    }
+
+    #mostrarSpotify {
+        margin-top: 16px;
+    }
+}
+@media (max-width: 720px) {
+    #hero {
+        min-height: 100svh;
+        height: 100svh;
+        overflow: hidden;
+    }
+
+    .contenidoHero {
+        min-height: 100%;
+        padding: 34px 22px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abrirInvitacion {
+        margin-top: auto;
+    }
+
+    #mostrarSpotify {
+        margin-top: 14px;
+        margin-bottom: 26px;
+    }
+}
+@media (max-width: 720px) {
+    #hero .contenidoHero > button {
+        transform: translateY(70px) !important;
+    }
+
+    #hero .contenidoHero > button:hover {
+        transform: translateY(70px) !important;
+    }
+}
+
+/* ==================================================
+   ENTREGA FINAL — PORTADA MÓVIL ESTABLE
+   Mantiene los botones anclados al borde inferior.
+================================================== */
+@media (max-width: 720px) {
+    #hero {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        height: 100svh !important;
+        min-height: 100svh !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #hero .contenidoHero {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 48px 22px 24px !important;
+        transform: none !important;
+        display: block !important;
+        text-align: center !important;
+    }
+
+    #hero #abrirInvitacion,
+    #hero #mostrarSpotify {
+        position: absolute !important;
+        left: 50% !important;
+        width: calc(100% - 44px) !important;
+        max-width: 340px !important;
+        margin: 0 !important;
+        transform: translateX(-50%) !important;
+        z-index: 20 !important;
+    }
+
+    #hero #abrirInvitacion {
+        bottom: 104px !important;
+    }
+
+    #hero #mostrarSpotify {
+        bottom: 24px !important;
+    }
+
+    #hero #abrirInvitacion:hover,
+    #hero #mostrarSpotify:hover {
+        transform: translateX(-50%) !important;
+    }
 }

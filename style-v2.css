@@ -240,7 +240,7 @@ section {
     }
 
     #hero > img {
-        object-position: center center;
+        object-position: 65% 25%;
     }
 
     #hero::after {
